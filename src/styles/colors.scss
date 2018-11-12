@@ -1,0 +1,107 @@
+$dark-gray1: #182026 !default;
+$dark-gray2: #202b33 !default;
+$dark-gray3: #293742 !default;
+$dark-gray4: #30404d !default;
+$dark-gray5: #394b59 !default;
+
+$gray1: #5c7080 !default;
+$gray2: #738694 !default;
+$gray3: #8a9ba8 !default;
+$gray4: #a7b6c2 !default;
+$gray5: #bfccd6 !default;
+
+$light-gray1: #ced9e0 !default;
+$light-gray2: #d8e1e8 !default;
+$light-gray3: #e1e8ed !default;
+$light-gray4: #ebf1f5 !default;
+$light-gray5: #f5f8fa !default;
+
+$blue: #0077cc;
+
+$blue1: #00365d !default;
+$blue2: #005da0 !default;
+$blue3: $blue !default;
+$blue4: #4a9eda !default;
+$blue5: #7db9e5 !default;
+
+$blue-map: (
+  1: $blue1,
+  2: $blue2,
+  3: $blue3,
+  4: $blue4,
+  5: $blue5
+);
+
+$red: #cc0011 !default;
+
+$red1: #610008 !default;
+$red2: #a2000d !default;
+$red3: $red !default;
+$red4: #e16973 !default;
+$red5: #ea969d !default;
+
+$red-map: (
+  1: $red1,
+  2: $red2,
+  3: $red3,
+  4: $red4,
+  5: $red5
+);
+
+$orange: #c50;
+
+$orange5: #f3d9c6;
+$orange4: #e4a87c;
+$orange3: $orange;
+$orange2: #b84c00;
+$orange1: #843700;
+
+$orange-map: (
+  1: $orange1,
+  2: $orange2,
+  3: $orange3,
+  4: $orange4,
+  5: $orange5
+);
+
+$green: #00cc55;
+
+$green1: #006128 !default;
+$green2: #00a243 !default;
+$green3: $green !default;
+$green4: #79e4a6 !default;
+$green5: #c5f3d8 !default;
+
+$green-map: (
+  1: $green1,
+  2: $green2,
+  3: $green3,
+  4: $green4,
+  5: $green5
+);
+
+$color-map-list: ('blue', $blue-map), ('green', $green-map),
+  ('orange', $orange-map), ('red', $red-map);
+
+@each $color in $color-map-list {
+  $color-name: nth($color, 1);
+  $color-map: nth($color, 2);
+
+  .tc-color-#{$color-name} {
+    color: map-get($color-map, 3);
+  }
+
+  .tc-bg-#{$color-name} {
+    background-color: map-get($color-map, 3);
+  }
+
+  @for $i from 1 to 6 {
+    .tc-color-#{$color-name}-#{$i} {
+      color: map-get($color-map, $i);
+    }
+
+    .tc-bg-#{$color-name}-#{$i} {
+      background-color: map-get($color-map, $i);
+    }
+  }
+}
