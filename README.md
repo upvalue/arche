@@ -33,6 +33,6 @@ for use elsewhere.
 
 You can run it with
 
-> yarn
-> yarn start
+    yarn
+    yarn start
 
