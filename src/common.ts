@@ -5,9 +5,12 @@ import { AtomProps } from "./types";
 
 // common.ts
 
-export const arrayToString = (x: ReadonlyArray<string> | string | undefined) => {
-  return Array.isArray(x) ? x.join(' ') : x;
-}
+/**
+ * Converts an array to space-separated strings, if it is an array.
+ * Used for example for padding 'p1' => 'p1', ['px1', 'py2'] => 'px1 py2'
+ */
+export const arrayToString = (x: ReadonlyArray<string> | string | undefined) =>
+  Array.isArray(x) ? x.join(' ') : x;
 
 /**
  * Extract functional CSS style class names from props

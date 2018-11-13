@@ -1,5 +1,15 @@
 @import './styles/colors.scss';
 
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+#rootview {
+  flex: 1 1 auto;
+}
+
 #rootview.dark {
   background-color: $dark-gray4;
   color: white;
