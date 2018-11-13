@@ -1,0 +1,41 @@
+// spacing.scss - padding and margins
+
+$space-0: 0rem !default;
+$space-1: 0.25rem !default;
+$space-2: 0.5rem !default;
+$space-3: 1rem !default;
+$space-4: 2rem !default;
+$space-5: 4rem !default;
+
+$spaces: (
+  0: $space-0,
+  1: $space-1,
+  2: $space-2,
+  3: $space-3,
+  4: $space-4,
+  5: $space-5
+);
+
+$types: (('p', 'padding'), ('m', 'margin'));
+$directions: (('l', ('left')), ('t', ('top')), ('r', ('right')), ('b', ('bottom')), ('x', ('left', 'right')), ('y', ('top', 'bottom')));
+
+@each $type in $types {
+  $typeabbrev: nth($type, 1);
+  $typefield: nth($type, 2);
+
+  @for $i from 0 to 6 {
+    .#{$typeabbrev}#{$i} {
+      #{$typefield}: map-get($spaces, $i);
+    }
+
+    @each $direction in $directions {
+      $abbrev: nth($direction, 1);
+      $fields: nth($direction, 2);
+        .#{$typeabbrev}#{$abbrev}#{$i} {
+          @each $field in $fields {
+            #{$typefield}-#{$field}: map-get($spaces, $i);
+          }
+        }
+      }
+  }
+}

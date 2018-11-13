@@ -9,18 +9,18 @@ export const arrayToString = (x: ReadonlyArray<string> | string | undefined) => 
   return Array.isArray(x) ? x.join(' ') : x;
 }
 
-
 /**
  * Extract functional CSS style class names from props
  * @param componentClassName Component class name, always present
  * @param props To extract class names from
  */
-export const buildClassNames = (componentClassName: string, props: AtomProps) => {
+export const buildClassNames = (componentClassName: string, props: any) => {
   const classNames = [
     useTheme(),
-    `tc-${componentClassName}`,
-    props.bg && `tc-bg-${props.bg}`,
-    props.color && `tc-color-${props.color}`,
+    `${componentClassName}`,
+    props.bg && `bg-${props.bg}`,
+    props.color && `color-${props.color}`,
+    props.intent,
     arrayToString(props.margin),
     arrayToString(props.padding),
     props.className,
@@ -29,13 +29,16 @@ export const buildClassNames = (componentClassName: string, props: AtomProps) =>
   return classNames.filter(Boolean).join(' ');
 }
 
+/**
+ * Create a simple atomic element
+ * @param defaultComponent  The component or tag to use if none is specified in props
+ * @param componentClassName Classname that will always be added e.g. "button", "view" etc
+ * @param props Props
+ */
 export const createAtom = (defaultComponent: string, componentClassName: string, props: AtomProps) => {
   const elementProps: any = {
+    ...props,
     className: buildClassNames(componentClassName, props),
-  }
-
-  if (props.style) {
-    elementProps.style = props.style;
   }
 
   return React.createElement(props.component || defaultComponent, elementProps, props.children);

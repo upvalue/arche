@@ -20,7 +20,7 @@ class App extends Component<{}, AppState> {
   };
 
   toggleTheme = () => {
-    this.setState(prevState => ({ theme: prevState.theme === undefined ? 'tc-dark' : undefined }));
+    this.setState(prevState => ({ theme: prevState.theme === undefined ? 'dark' : undefined }));
   }
 
   render() {
@@ -28,12 +28,12 @@ class App extends Component<{}, AppState> {
 
     return (
       <ThemeProvider theme={this.state.theme}>
-        <View>
+        <View id="rootview" padding="p4">
           <h1 className="mt0">Third Coast</h1>
-          <p>Third Coast is a minimalistic set of React components and styling for use in my applications.</p>
+          <p>Third Coast is a set of React components and styling for use in my applications.</p>
 
           <h3>Themes</h3>
-          <p>Third Coast supports simple themes based on class names and context. Out of the box there are light and dark themes.</p>
+          <p>Third Coast supports simple themes based on class names and context. Out of the box there are light (default) and dark themes.</p>
           <button onClick={this.toggleTheme}>
             Toggle theme
           </button>

@@ -1,14 +1,7 @@
 @import "./normalize.css";
-@import "~basscss/css/basscss-cp.min.css";
 
-:root {
-  --space-1: .25rem;
-  --space-2: .5rem;
-  --space-3: 1rem;
-  --space-4: 2rem;
-}
-
-
+@import "./flex.scss";
 @import "./colors.scss";
 @import "./font.scss";
 @import "./utils.scss";
+@import "./spacing.scss";

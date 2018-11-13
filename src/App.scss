@@ -1,5 +1,6 @@
+@import './styles/colors.scss';
 
-body {
-  margin: 1rem;
-  padding: 1rem;
+#rootview.dark {
+  background-color: $dark-gray4;
+  color: white;
 }

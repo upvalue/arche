@@ -18,6 +18,8 @@
     "react": "^16.7.0-alpha.0",
     "react-dom": "^16.7.0-alpha.0",
     "react-scripts": "^2.1.1",
+    "rollup": "^0.67.1",
+    "rollup-plugin-typescript3": "^1.1.2",
     "typescript": "^3.1.6"
   },
   "scripts": {

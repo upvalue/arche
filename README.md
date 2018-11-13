@@ -14,20 +14,22 @@ Primary reasons for existence:
 - Functional CSS under the hood
 - Lightweight and tree shaking friendly
 - Atomic design
+- No use of !important
 
 It derives heavily from, but does not depend on the following libraries:
 
-- nanostyled
-- Blueprint
+- nanostyled (functional css as props)
+- Blueprint (most styling)
+- basscss (class names and some code)
 
 It does depend on: 
 
-- basscss
 - SASS 
 
 # Repository usage
 
-This git repository is both a React application for demo/development purposes, and a Rollup library.
+This git repository is both a React application for demo/development purposes, and a Rollup library
+for use elsewhere.
 
 You can run it with
 

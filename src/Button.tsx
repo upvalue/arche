@@ -8,7 +8,7 @@ import { createAtom } from './common';
 import './Button.scss';
 
 interface ButtonProps extends AtomProps {
-
+  intent?: 'primary' | 'secondary' | 'warning' | 'danger';
 }
 
 const buttonDefaultProps: AtomProps = {
