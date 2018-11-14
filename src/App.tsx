@@ -5,38 +5,40 @@ import { AccessAlarm } from '@material-ui/icons';
 import './styles/all.scss';
 import './App.scss'
 
-import Text from './Text';
 import Button from './Button';
 import View from './View';
-import { ThemeProvider, ThemeType } from './Theme';
+import ThirdCoast from './ThirdCoast';
+import { useTheme } from '..';
 
-interface AppState {
-  theme: ThemeType;
-};
+import { MdLabel } from 'react-icons/md';
 
-class App extends Component<{}, AppState> {
-  state = {
-    theme: undefined,
-  };
+const ThemeToggler = () => {
+  const [themeName, setTheme] = useTheme();
 
+  return <Button onClick={() => setTheme(themeName === 'dark' ? '' : 'dark')}>
+    Toggle Theme
+  </Button>
+
+}
+
+class App extends Component<{}, {}> {
   toggleTheme = () => {
-    this.setState(prevState => ({ theme: prevState.theme === undefined ? 'dark' : undefined }));
+    console.log('toggle theme');
   }
 
   render() {
     const colors = ['primary', 'secondary', 'warning', 'danger'];
 
     return (
-      <ThemeProvider theme={this.state.theme}>
+      <ThirdCoast>
         <View id="rootview" padding="p4">
           <h1 className="mt0">Third Coast</h1>
           <p>Third Coast is a set of React components and styling for use in my applications.</p>
 
           <h3>Themes</h3>
           <p>Third Coast supports simple themes based on class names and context. Out of the box there are light (default) and dark themes.</p>
-          <button onClick={this.toggleTheme}>
-            Toggle theme
-          </button>
+
+          <ThemeToggler />
 
           <h3>Text</h3>
           <p>The default font stack is GitHub's for nice out of the box fonts on all machines, and Open Sans / Inconsolata when you're willing to load more.</p>
@@ -91,7 +93,7 @@ class App extends Component<{}, AppState> {
           </View>
           <h3>Labels</h3>
         </View>
-      </ThemeProvider>
+      </ThirdCoast>
     );
   }
 }

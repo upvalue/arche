@@ -1,17 +1,21 @@
-// Theme.ts - Theme
-import React, { useContext } from 'react';
+// Theme.tsx - Theme context and hook
+import React, { useContext, useState } from 'react';
 
-export type ThemeType = undefined | string;
+export type ThemeName = undefined | string;
 
-const ThemeContext = React.createContext<ThemeType>(undefined);
+export type Theme = [ThemeName, (theme: ThemeName) => void];
+
+const ThemeContext = React.createContext<Theme>(undefined as any as Theme);
 
 interface ThemeProviderProps {
-  theme?: ThemeType;
+  theme?: ThemeName;
   children?: React.ReactNode;
 }
 
 export const ThemeProvider = (props: ThemeProviderProps) => {
-  return <ThemeContext.Provider value={props.theme}>
+  const [themeName, setTheme] = useState<ThemeName>(undefined);
+
+  return <ThemeContext.Provider value={[themeName, setTheme]}>
     {props.children}
   </ThemeContext.Provider>
 }
