@@ -1,13 +1,22 @@
 @import "./styles/colors.scss";
 
+$intent-map: (
+  'primary': ($primary2, $primary1),
+  'secondary': ($secondary2, $secondary1),
+  'warning': ($warning2, $warning1),
+  'danger': ($danger2, $danger1)
+) !default;
+
 .button {
   border-radius: 2px;
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: $light-gray5;
+  background-image: linear-gradient(to bottom, rgba($white, 0.8), rgba($white, 0));
   border: 0;
   cursor: pointer;
+  font-size: 14px;
   // padding: 5px 10px;
   box-shadow:
     inset 0 0 0 1px rgba($black, .2),
@@ -30,9 +39,9 @@
   }
 }
 
-
 .button.dark {
   background-color: $dark-gray5;
+  background-image: linear-gradient(to bottom, rgba($white, 0.05), rgba($white, 0));
   color: $white;
   box-shadow: 0 0 0 1px rgba($black, 0.4);
 
@@ -41,3 +50,43 @@
     inset 0 1px 2px rgba($black, 0.2);
   }
 }
+
+@each $intent, $pair in $intent-map {
+  $color: nth($pair, 1);
+  $activeColor: nth($pair, 2);
+  .button.#{$intent} {
+    background-image: linear-gradient(to bottom, rgba($white, 0.1), rgba($white, 0));
+    background-color: $color;
+    color: $white;
+    &:active {
+      background-color: $activeColor;
+    }
+  }
+}
+
+.button.minimal {
+  background: none;
+  box-shadow: none;
+
+  &:hover {
+    background-color: $light-gray2;
+  }
+
+  &:active {
+    background-color: $light-gray1;
+  }
+
+  &.dark {
+    color: $white;
+    box-shadow: none;
+
+    &:hover {
+      background-color: $dark-gray5;
+    }
+
+    &:active {
+      background-color: lighten($dark-gray5, 10%);
+    }
+  }
+}
+

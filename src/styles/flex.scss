@@ -3,6 +3,17 @@
 .flex-column  { flex-direction: column }
 .flex-wrap    { flex-wrap: wrap }
 
+@include breakpoint(md) {
+  .flex-md-row { flex-direction: row }
+  .flex-md-column { flex-direction: column }
+}
+
+.flex-md-column {
+  @include breakpoint(md) {
+    flex-direction: row;
+  }
+}
+
 .items-start    { align-items: flex-start }
 .items-end      { align-items: flex-end }
 .items-center   { align-items: center }

@@ -1,5 +1,7 @@
 import { Padding, Margin } from './types-generated';
 
+export type Intent = 'primary' | 'secondary' | 'warning' | 'danger';
+
 export interface AtomProps {
   component?: any;
   /**
@@ -15,4 +17,5 @@ export interface AtomProps {
   style?: React.CSSProperties;
   margin?: Margin | ReadonlyArray<Margin>;
   padding?: Padding | ReadonlyArray<Padding>;
+  minimal?: boolean;
 };

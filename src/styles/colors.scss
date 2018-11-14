@@ -29,6 +29,7 @@ $gray-map: (
   5: $gray5
 );
 
+
 $light-gray1: #ced9e0 !default;
 $light-gray2: #d8e1e8 !default;
 $light-gray3: #e1e8ed !default;
@@ -43,72 +44,72 @@ $light-gray-map: (
   5: $light-gray5
 );
 
-$blue: #0077cc;
+$primary: #0077cc;
 
-$blue1: #00365d !default;
-$blue2: #005da0 !default;
-$blue3: $blue !default;
-$blue4: #4a9eda !default;
-$blue5: #7db9e5 !default;
+$primary1: #00365d !default;
+$primary2: #005da0 !default;
+$primary3: $primary !default;
+$primary4: #4a9eda !default;
+$primary5: #7db9e5 !default;
 
-$blue-map: (
-  1: $blue1,
-  2: $blue2,
-  3: $blue3,
-  4: $blue4,
-  5: $blue5
+$primary-map: (
+  1: $primary1,
+  2: $primary2,
+  3: $primary3,
+  4: $primary4,
+  5: $primary5
 );
 
-$red: #cc0011 !default;
+$danger: #cc0011 !default;
 
-$red1: #610008 !default;
-$red2: #a2000d !default;
-$red3: $red !default;
-$red4: #e16973 !default;
-$red5: #ea969d !default;
+$danger1: #610008 !default;
+$danger2: #a2000d !default;
+$danger3: $danger !default;
+$danger4: #e16973 !default;
+$danger5: #ea969d !default;
 
-$red-map: (
-  1: $red1,
-  2: $red2,
-  3: $red3,
-  4: $red4,
-  5: $red5
+$danger-map: (
+  1: $danger1,
+  2: $danger2,
+  3: $danger3,
+  4: $danger4,
+  5: $danger5
 );
 
-$orange: #c50;
+$warning: #c50;
 
-$orange5: #f3d9c6;
-$orange4: #e4a87c;
-$orange3: $orange;
-$orange2: #b84c00;
-$orange1: #843700;
+$warning5: #f3d9c6;
+$warning4: #e4a87c;
+$warning3: $warning;
+$warning2: #b84c00;
+$warning1: #843700;
 
-$orange-map: (
-  1: $orange1,
-  2: $orange2,
-  3: $orange3,
-  4: $orange4,
-  5: $orange5
+$warning-map: (
+  1: $warning1,
+  2: $warning2,
+  3: $warning3,
+  4: $warning4,
+  5: $warning5
 );
 
-$green: #00cc55;
+$secondary: #00cc55;
 
-$green1: #006128 !default;
-$green2: #00a243 !default;
-$green3: $green !default;
-$green4: #79e4a6 !default;
-$green5: #c5f3d8 !default;
+$secondary1: #006128 !default;
+$secondary2: #00a243 !default;
+$secondary3: $secondary !default;
+$secondary4: #79e4a6 !default;
+$secondary5: #c5f3d8 !default;
 
-$green-map: (
-  1: $green1,
-  2: $green2,
-  3: $green3,
-  4: $green4,
-  5: $green5
+$secondary-map: (
+  1: $secondary1,
+  2: $secondary2,
+  3: $secondary3,
+  4: $secondary4,
+  5: $secondary5
 );
 
-$color-map-list: ('blue', $blue-map), ('green', $green-map),
-  ('orange', $orange-map), ('red', $red-map),
+$color-map-list: ('primary', $primary-map), ('secondary', $secondary-map),
+  ('warning', $warning-map), ('danger', $danger-map),
   ('gray', $gray-map), ('dark-gray', $dark-gray-map),
   ('light-gray', $light-gray-map);
 

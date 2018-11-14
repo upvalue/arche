@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { HTMLAttributes } from 'react';
 import { AtomProps } from './types';
 
 import { createAtom } from './common';
+import { Intent } from './types';
 
-interface ButtonProps extends AtomProps {
-  intent?: 'primary' | 'secondary' | 'warning' | 'danger';
+interface ButtonProps extends HTMLAttributes<HTMLButtonElement>, AtomProps {
+  intent?: Intent;
 }
 
 const buttonDefaultProps: AtomProps = {

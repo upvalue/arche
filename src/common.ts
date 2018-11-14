@@ -24,6 +24,7 @@ export const buildClassNames = (componentClassName: string, props: any) => {
     props.bg && `bg-${props.bg}`,
     props.color && `color-${props.color}`,
     props.intent,
+    props.minimal && 'minimal',
     arrayToString(props.margin),
     arrayToString(props.padding),
     props.className,
@@ -42,6 +43,7 @@ export const createAtom = (defaultComponent: string, componentClassName: string,
   const elementProps: any = {
     ...props,
     className: buildClassNames(componentClassName, props),
+    minimal: undefined,
   }
 
   return React.createElement(props.component || defaultComponent, elementProps, props.children);

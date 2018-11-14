@@ -1,0 +1,16 @@
+
+$width-sm: 0;
+$width-md: 768px;
+$width-lg: 1012px;
+
+$breakpoints: (
+  sm: $width-sm,
+  md: $width-md,
+  lg: $width-lg
+);
+
+@mixin breakpoint($name) {
+  @media (min-width: map-get($breakpoints, $name)) {
+    @content;
+  }
+}

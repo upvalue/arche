@@ -24,7 +24,7 @@ class App extends Component<{}, AppState> {
   }
 
   render() {
-    const colors = ['blue', 'green', 'orange', 'red'];
+    const colors = ['primary', 'secondary', 'warning', 'danger'];
 
     return (
       <ThemeProvider theme={this.state.theme}>
@@ -64,9 +64,31 @@ class App extends Component<{}, AppState> {
 
           <h3>Buttons</h3>
 
-          <Button>
-            Hello world button
-          </Button>
+          <View className="flex">
+            <Button margin="mr1">
+              Regular Button
+            </Button>
+
+            <Button intent="primary" margin="mr1">
+              Primary Button
+            </Button>
+
+            <Button intent="secondary" margin="mr1">
+              Secondary Button
+            </Button>
+
+            <Button intent="warning" margin="mr1">
+              Warning Button
+            </Button>
+
+            <Button intent="danger" margin="mr1">
+              Danger Button
+            </Button>
+
+            <Button minimal>
+              Minimal button
+            </Button>
+          </View>
           <h3>Labels</h3>
         </View>
       </ThemeProvider>
