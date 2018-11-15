@@ -1,10 +1,20 @@
 {
   "compilerOptions": {
-    "target": "es5",                      
-    "module": "commonjs",                  
-    "strict": true,                         
+    "target": "es5",
+    "allowJs": true,
+    "skipLibCheck": false,
     "esModuleInterop": true,
-    "jsx": "react",
-    "outDir": "dist"
-  }
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "preserve"
+  },
+  "include": [
+    "src"
+  ]
 }
