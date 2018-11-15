@@ -5,7 +5,7 @@ my personal projects and website, and not foisting it on anyone else, I don't se
 
 # Third Coast
 
-Third Coast is a simple React UI component library for use in my own projects.
+Third Coast is a simple React component library for use in my own projects.
 
 Primary reasons for existence:
 
@@ -14,7 +14,7 @@ Primary reasons for existence:
 - Functional CSS under the hood
 - Lightweight and tree shaking friendly
 - Atomic design
-- No use of !important
+- !important occurs nowhere in the codebase
 
 It derives heavily from, but does not depend on the following libraries:
 

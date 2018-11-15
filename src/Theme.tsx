@@ -20,4 +20,7 @@ export const ThemeProvider = (props: ThemeProviderProps) => {
   </ThemeContext.Provider>
 }
 
+/**
+ * Returns [theme, setTheme] in exactly the same way as useState.
+ */
 export const useTheme = () => useContext(ThemeContext);
