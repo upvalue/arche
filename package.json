@@ -1,8 +1,8 @@
 {
-  "name": "third-coast",
-  "version": "0.1.0",
-  "private": true,
-  "main": "dist/index.js",
+  "name": "@upvalueio/third-coast",
+  "version": "0.1.4",
+  "private": false,
+  "main": "dist/library-index.js",
   "dependencies": {
     "@types/react": "^16.7.3",
     "@types/react-dom": "^16.0.9",

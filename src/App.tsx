@@ -8,7 +8,7 @@ import './App.scss'
 import Button from './Button';
 import View from './View';
 import ThirdCoast from './ThirdCoast';
-import { useTheme } from '..';
+import { useTheme } from './Theme';
 
 import { MdLabel } from 'react-icons/md';
 
