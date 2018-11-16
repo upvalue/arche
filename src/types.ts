@@ -1,6 +1,10 @@
-import { Padding, Margin } from './types-generated';
+import { PaddingClass, MarginClass, FlexClass } from './types-generated';
 
 export type Intent = 'primary' | 'secondary' | 'warning' | 'danger';
+
+export interface IntentProps {
+  intent?: Intent;
+}
 
 export interface AtomProps {
   component?: any;
@@ -15,7 +19,9 @@ export interface AtomProps {
   children?: React.ReactNode;
   className?: string;
   style?: React.CSSProperties;
-  margin?: Margin | ReadonlyArray<Margin>;
-  padding?: Padding | ReadonlyArray<Padding>;
+  margin?: MarginClass | ReadonlyArray<MarginClass>;
+  padding?: PaddingClass | ReadonlyArray<PaddingClass>;
+  flex?: FlexClass | ReadonlyArray<FlexClass>;
   minimal?: boolean;
 };
+

@@ -1,15 +1,14 @@
 import React, { HTMLAttributes } from 'react';
-import { AtomProps } from './types';
+import { AtomProps, IntentProps } from './types';
 
 import { createAtom } from './common';
-import { Intent } from './types';
 
-interface ButtonProps extends HTMLAttributes<HTMLButtonElement>, AtomProps {
-  intent?: Intent;
+interface ButtonProps extends HTMLAttributes<HTMLButtonElement>, AtomProps, IntentProps {
 }
 
 const buttonDefaultProps: AtomProps = {
-  padding: ['py1', 'px2']
+  padding: ['py1', 'px2'],
+  flex: ['flex', 'items-center']
 };
 
 /**

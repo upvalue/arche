@@ -44,6 +44,9 @@ export const createAtom = (defaultComponent: string, componentClassName: string,
     ...props,
     className: buildClassNames(componentClassName, props),
     minimal: undefined,
+    margin: undefined,
+    padding: undefined,
+    intent: undefined,
   }
 
   return React.createElement(props.component || defaultComponent, elementProps, props.children);
