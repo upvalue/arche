@@ -13,7 +13,6 @@ export interface ThirdCoastProps {
  * 
  * @param props 
  */
-
 export const ThirdCoast = (props: ThirdCoastProps) => {
   return <BreakpointProvider>
     <ThemeProvider>
