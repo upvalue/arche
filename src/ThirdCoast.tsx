@@ -1,9 +1,10 @@
 import React from 'react';
 
 import { BreakpointProvider } from "./Breakpoint";
-import { ThemeProvider } from "./Theme";
+import { ThemeProvider, ThemeName } from "./Theme";
 
 export interface ThirdCoastProps {
+  onThemeChange?: (theme: ThemeName) => void;
   children?: React.ReactNode;
 }
 
@@ -15,7 +16,9 @@ export interface ThirdCoastProps {
  */
 export const ThirdCoast = (props: ThirdCoastProps) => {
   return <BreakpointProvider>
-    <ThemeProvider>
+    <ThemeProvider
+      onThemeChange={props.onThemeChange}
+    >
       {props.children}
     </ThemeProvider>
   </BreakpointProvider>
