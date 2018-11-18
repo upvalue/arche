@@ -18,7 +18,20 @@ const ThemeToggler = () => {
   return <Button onClick={() => setTheme(themeName === 'dark' ? '' : 'dark')}>
     Toggle Theme
   </Button>
+}
 
+interface RootViewProps {
+  children?: React.ReactNode;
+}
+
+const RootView = (props: RootViewProps) => {
+  const [theme] = useTheme();
+
+  return (
+    <View id="rootview" padding="p4" className={theme || ''}>
+      {props.children}
+    </View>
+  );
 }
 
 class App extends Component<{}, {}> {
@@ -31,7 +44,7 @@ class App extends Component<{}, {}> {
 
     return (
       <ThirdCoast>
-        <View id="rootview" padding="p4">
+        <RootView>
           <h1 className="mt0">Third Coast</h1>
           <p>Third Coast is a set of React components and styling for use in my applications.</p>
 
@@ -92,7 +105,7 @@ class App extends Component<{}, {}> {
             </Button>
           </View>
           <h3>Labels</h3>
-        </View>
+        </RootView>
       </ThirdCoast>
     );
   }

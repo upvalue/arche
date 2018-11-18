@@ -1,6 +1,5 @@
 import React from 'react';
 
-import { useTheme } from "./Theme";
 import { AtomProps } from "./types";
 
 // common.ts
@@ -19,7 +18,6 @@ export const arrayToString = (x: ReadonlyArray<string> | string | undefined) =>
  */
 export const buildClassNames = (componentClassName: string, props: any) => {
   const classNames = [
-    useTheme()[0],
     `${componentClassName}`,
     props.bg && `bg-${props.bg}`,
     props.color && `color-${props.color}`,
