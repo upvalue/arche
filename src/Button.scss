@@ -69,11 +69,11 @@ $intent-map: (
   box-shadow: none;
 
   &:hover {
-    background-color: $light-gray2;
+    background-color: rgba($gray4, 0.3);
   }
 
   &:active {
-    background-color: $light-gray1;
+    background-color: rgba($gray2, 0.3);
   }
 }
 
@@ -82,10 +82,10 @@ $intent-map: (
   box-shadow: none;
 
   &:hover {
-    background-color: $dark-gray5;
+    background-color: rgba($gray3, 0.15);
   }
 
   &:active {
-    background-color: lighten($dark-gray5, 10%);
+    background-color: rgba($gray3, 0.3);
   }
 }

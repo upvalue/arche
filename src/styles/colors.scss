@@ -43,13 +43,13 @@ $light-gray-map: (
   5: $light-gray5
 );
 
-$primary: #0077cc;
+$primary: #137cbd;
 
-$primary1: #00365d !default;
-$primary2: #005da0 !default;
+$primary1: #0e5aba !default;
+$primary2: #106ba3 !default;
 $primary3: $primary !default;
-$primary4: #4a9eda !default;
-$primary5: #7db9e5 !default;
+$primary4: #2b95d6 !default;
+$primary5: #48aff0 !default;
 
 $primary-map: (
   1: $primary1,
@@ -59,13 +59,13 @@ $primary-map: (
   5: $primary5
 );
 
-$danger: #cc0011 !default;
+$danger: #db3737 !default;
 
-$danger1: #610008 !default;
-$danger2: #a2000d !default;
+$danger1: #a82a2a !default;
+$danger2: #c23030 !default;
 $danger3: $danger !default;
-$danger4: #e16973 !default;
-$danger5: #ea969d !default;
+$danger4: #f55656 !default;
+$danger5: #ff7373 !default;
 
 $danger-map: (
   1: $danger1,
@@ -75,13 +75,13 @@ $danger-map: (
   5: $danger5
 );
 
-$warning: #c50;
+$warning: #d9822b;
 
-$warning5: #f3d9c6;
-$warning4: #e4a87c;
+$warning5: #ffb366;
+$warning4: #f29d49;
 $warning3: $warning;
-$warning2: #b84c00;
-$warning1: #843700;
+$warning2: #bf7326;
+$warning1: #a66321;
 
 $warning-map: (
   1: $warning1,
@@ -91,13 +91,13 @@ $warning-map: (
   5: $warning5
 );
 
-$secondary: #00cc55;
+$secondary: #0f9960;
 
-$secondary1: #006128 !default;
-$secondary2: #00a243 !default;
+$secondary1: #0a6640 !default;
+$secondary2: #0d8050 !default;
 $secondary3: $secondary !default;
-$secondary4: #79e4a6 !default;
-$secondary5: #c5f3d8 !default;
+$secondary4: #15b371 !default;
+$secondary5: #3dcc91 !default;
 
 $secondary-map: (
   1: $secondary1,
