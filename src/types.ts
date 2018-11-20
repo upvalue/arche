@@ -7,6 +7,7 @@ export interface IntentProps {
 }
 
 export interface AtomProps {
+  ref?: any;
   component?: any;
   /**
    * Foreground color. One of primary, secondary, warning, or danger. Shades from 1 to 5.
