@@ -23,7 +23,6 @@ export const buildClassNames = (componentClassName: string, props: any) => {
     props.color && `color-${props.color}`,
     props.intent,
     props.minimal && 'minimal',
-    props.flex && 'flex',
     arrayToString(props.flex),
     arrayToString(props.margin),
     arrayToString(props.padding),
