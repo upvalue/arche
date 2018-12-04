@@ -9,9 +9,10 @@ $intent-map: (
 
 .button {
   border-radius: 2px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  // Covered by added classes
+  // display: flex;
+  // align-items: center;
+  // justify-content: center;
   background-color: $light-gray5;
   background-image: linear-gradient(to bottom, rgba($white, 0.8), rgba($white, 0));
   border: 0;

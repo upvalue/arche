@@ -23,7 +23,10 @@ export const buildClassNames = (componentClassName: string, props: any) => {
     props.color && `color-${props.color}`,
     props.intent,
     props.minimal && 'minimal',
-    arrayToString(props.flex),
+    props.flex && 'flex',
+    arrayToString(
+      Array.isArray(props.flex) ? props.flex.filter((f: any) => f !== 'flex') : props.flex
+    ),
     arrayToString(props.margin),
     arrayToString(props.padding),
     props.className,
@@ -38,7 +41,7 @@ export const buildClassNames = (componentClassName: string, props: any) => {
  * @param componentClassName Classname that will always be added e.g. "button", "view" etc
  * @param props Props
  */
-export const createAtom = (defaultComponent: string, componentClassName: string, props: AtomProps) => {
+export const createAtom = (defaultComponent: string, componentClassName: string, props: any) => {
   const elementProps: any = {
     ...props,
     className: buildClassNames(componentClassName, props),

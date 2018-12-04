@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { capitalize } from 'lodash';
 import { AccessAlarm } from '@material-ui/icons';
+import { InOverlay } from './OverlayPortal';
 
 import './styles/all.scss';
 import './App.scss'
@@ -35,6 +36,10 @@ const RootView = (props: RootViewProps) => {
 }
 
 class App extends Component<{}, {}> {
+  state = {
+    toast: false,
+  };
+
   toggleTheme = () => {
     console.log('toggle theme');
   }
@@ -52,9 +57,6 @@ class App extends Component<{}, {}> {
           <p>Third Coast supports simple themes based on class names and context. Out of the box there are light (default) and dark themes.</p>
 
           <ThemeToggler />
-
-          <h3>Text</h3>
-          <p>The default font stack is GitHub's for nice out of the box fonts on all machines, and Open Sans / Inconsolata when you're willing to load more.</p>
 
           <h3>Colors</h3>
 
@@ -104,7 +106,21 @@ class App extends Component<{}, {}> {
               Minimal button
             </Button>
           </View>
+
           <h3>Labels</h3>
+
+          <h3>Toast</h3>
+
+          <Button onClick={() => this.setState({ toast: true })}>Create toast</Button>
+
+          {this.state.toast &&
+            <InOverlay>
+              <p>something</p>
+            </InOverlay>
+          }
+
+          }
+  
         </RootView>
       </ThirdCoast>
     );
