@@ -110,7 +110,7 @@ class App extends Component<{}, {}> {
 
           <h3>Input</h3>
 
-          <Input margin="mr1" type="text" placeholder="Type some text..." />
+          <Input margin="mr3" type="text" placeholder="Type some text..." />
           <Input type="text" placeholder="disabled" disabled={true} />
 
           <h3>Toast</h3>

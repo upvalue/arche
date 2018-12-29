@@ -8,7 +8,8 @@ import './styles/all.scss';
 interface InputProps extends InputHTMLAttributes<HTMLInputElement>, AtomProps {
 }
 
-const buttonDefaultProps: AtomProps = {
+const inputDefaultProps: AtomProps = {
+  padding: ['px2']
 };
 
 
@@ -17,7 +18,7 @@ const buttonDefaultProps: AtomProps = {
  */
 export const Input = React.memo((props: InputProps) => {
   // TODO if this is common, should probably move it to createAtom to avoid multiple merges, do it all at once
-  return createAtom('input', 'input', props);
+  return createAtom('input', 'input', { ...inputDefaultProps, ...props });
 });
 
 export default Input;
