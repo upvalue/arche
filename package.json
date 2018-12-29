@@ -1,6 +1,6 @@
 {
   "name": "@upvalueio/third-coast",
-  "version": "0.1.17",
+  "version": "0.1.19",
   "private": false,
   "main": "dist/library-index.js",
   "dependencies": {

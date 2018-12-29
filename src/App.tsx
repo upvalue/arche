@@ -7,6 +7,7 @@ import './styles/all.scss';
 import './App.scss'
 
 import Button from './Button';
+import Input from './Input';
 import View from './View';
 import ThirdCoast from './ThirdCoast';
 import { useTheme } from './Theme';
@@ -107,20 +108,12 @@ class App extends Component<{}, {}> {
             </Button>
           </View>
 
-          <h3>Labels</h3>
+          <h3>Input</h3>
+
+          <Input margin="mr1" type="text" placeholder="Type some text..." />
+          <Input type="text" placeholder="disabled" disabled={true} />
 
           <h3>Toast</h3>
-
-          <Button onClick={() => this.setState({ toast: true })}>Create toast</Button>
-
-          {this.state.toast &&
-            <InOverlay>
-              <p>something</p>
-            </InOverlay>
-          }
-
-          }
-  
         </RootView>
       </ThirdCoast>
     );
