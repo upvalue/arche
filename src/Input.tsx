@@ -9,7 +9,7 @@ interface InputProps extends InputHTMLAttributes<HTMLInputElement>, AtomProps {
 }
 
 const inputDefaultProps: AtomProps = {
-  padding: ['px2']
+  padding: ['px2', 'py2']
 };
 
 
