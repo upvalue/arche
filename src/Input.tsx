@@ -1,9 +1,7 @@
-import React, { InputHTMLAttributes } from 'react';
-import { AtomProps, IntentProps } from './types';
+import { InputHTMLAttributes } from 'react';
+import { AtomProps } from './types';
 
 import { createAtom } from './common';
-
-import './styles/all.scss';
 
 interface InputProps extends InputHTMLAttributes<HTMLInputElement>, AtomProps {
 }
@@ -14,11 +12,11 @@ const inputDefaultProps: AtomProps = {
 
 
 /**
- * A button.
+ * A text input fields
  */
-export const Input = React.memo((props: InputProps) => {
+export const Input = (props: InputProps) => {
   // TODO if this is common, should probably move it to createAtom to avoid multiple merges, do it all at once
   return createAtom('input', 'input', { ...inputDefaultProps, ...props });
-});
+};
 
 export default Input;

@@ -1,18 +1,14 @@
 import React, { Component } from 'react';
 import { capitalize } from 'lodash';
-import { AccessAlarm } from '@material-ui/icons';
-import { InOverlay } from './OverlayPortal';
 
-import './styles/all.scss';
 import './App.scss'
 
 import Button from './Button';
 import Input from './Input';
 import View from './View';
+import Checkbox from './Checkbox';
 import ThirdCoast from './ThirdCoast';
 import { useTheme } from './Theme';
-
-import { MdLabel } from 'react-icons/md';
 
 const ThemeToggler = () => {
   const [themeName, setTheme] = useTheme();
@@ -114,6 +110,11 @@ class App extends Component<{}, {}> {
           <Input type="text" placeholder="disabled" disabled={true} />
 
           <h3>Toast</h3>
+
+          <h3>Checkbox</h3>
+
+          <Checkbox></Checkbox>
+
         </RootView>
       </ThirdCoast>
     );

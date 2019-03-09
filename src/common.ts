@@ -1,7 +1,5 @@
 import React from 'react';
 
-import { AtomProps } from "./types";
-
 // common.ts
 
 /**

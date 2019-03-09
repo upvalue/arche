@@ -6,7 +6,7 @@ export type OverlayNode = HTMLElement;
 
 export type OverlayState = {
   node: HTMLElement;
-  elements: ReadonlyArray<React.ReactElement<any> >;
+  elements: ReadonlyArray<React.ReactElement<any>>;
 };
 
 export type OverlayContextValue = [OverlayState, (ref: OverlayState) => void];
@@ -33,7 +33,7 @@ export const OverlayProvider = (props: { children: React.ReactNode }) => {
   );
 }
 
-export const InOverlay = (props: { children: React.ReactNode }) => {
+export const InOverlay = (_props: { children: React.ReactNode }) => {
   const [overlayState, setOverlayState] = useContext(OverlayContext);
 
   console.log('creating overlay', overlayState);

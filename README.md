@@ -1,8 +1,5 @@
 # Apology
 
-I feel bad for making another component library but at the same time since I'm just using it for
-my personal projects and website, and not foisting it on anyone else, I don't see a problem.
-
 # Third Coast
 
 Third Coast is a simple React component library for use in my own projects.
@@ -20,7 +17,7 @@ It derives heavily from, but does not depend on the following libraries:
 
 - nanostyled (functional css as props)
 - Blueprint (most styling)
-- basscss (class names and some code)
+- basscss (functioanl css class names and some code)
 
 It does depend on: 
 
@@ -36,3 +33,8 @@ You can run it with
     yarn
     yarn start
 
+And build the library with
+
+    yarn library-build
+
+Or just use `@upvalueio/third-coast`

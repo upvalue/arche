@@ -1,8 +1,6 @@
 import React from 'react';
 
-import { BreakpointProvider } from "./Breakpoint";
 import { ThemeProvider, ThemeName } from "./Theme";
-import { OverlayProvider } from "./OverlayPortal";
 
 export interface ThirdCoastProps {
   onThemeChange?: (theme: ThemeName) => void;
@@ -16,15 +14,13 @@ export interface ThirdCoastProps {
  * @param props 
  */
 export const ThirdCoast = (props: ThirdCoastProps) => {
-  return <BreakpointProvider>
+  return (
     <ThemeProvider
       onThemeChange={props.onThemeChange}
     >
-      <OverlayProvider>
-        {props.children}
-      </OverlayProvider>
+      {props.children}
     </ThemeProvider>
-  </BreakpointProvider>
+  );
 }
 
 export default ThirdCoast;

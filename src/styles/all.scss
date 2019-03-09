@@ -1,6 +1,8 @@
+@import "./defs/_colors.scss";
+
+@import "./colors.scss";
 @import "./breakpoints.scss";
 @import "./flex.scss";
-@import "./colors.scss";
 @import "./layout.scss";
 @import "./utils.scss";
 @import "./spacing.scss";
@@ -8,3 +10,4 @@
 // components
 @import "../Button.scss";
 @import "../Input.scss";
+@import "../Checkbox.scss";

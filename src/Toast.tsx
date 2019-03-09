@@ -1,11 +1,12 @@
-import React, { HTMLAttributes, useState } from 'react';
+import { HTMLAttributes, useState } from 'react';
 import { AtomProps, IntentProps } from './types';
 import { createAtom } from './common';
 
 interface ToastProps extends HTMLAttributes<HTMLDivElement>, AtomProps, IntentProps { }
 
-export const Toast = React.memo((props: ToastProps) => {
-  const [toastDismissed, setToastDismissed] = useState(false);
+export const Toast = (props: ToastProps) => {
+  // Required in order to avoid unused variable warning
+  const setToastDismissed = useState(false)[1];
 
   return createAtom('div', 'toast',
     {
@@ -15,6 +16,6 @@ export const Toast = React.memo((props: ToastProps) => {
       },
     }
   );
-});
+};
 
 export default Toast;
