@@ -1,5 +1,7 @@
-@import './styles/defs/colors.scss';
-@import './styles/all.scss';
+// @import './styles/defs/_colors.scss';
+// @import './styles/all.scss';
+
+@import '~@upvalueio/third-coast/index.scss';
 
 body {
   font-family: 'Inter UI', sans-serif;

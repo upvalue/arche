@@ -3,12 +3,7 @@ import { capitalize } from 'lodash';
 
 import './App.scss'
 
-import Button from './Button';
-import Input from './Input';
-import View from './View';
-import Checkbox from './Checkbox';
-import ThirdCoast from './ThirdCoast';
-import { useTheme } from './Theme';
+import { Button, Input, View, ThirdCoast, useTheme } from '@upvalueio/third-coast';
 
 const ThemeToggler = () => {
   const [themeName, setTheme] = useTheme();
@@ -30,6 +25,15 @@ const RootView = (props: RootViewProps) => {
       {props.children}
     </View>
   );
+}
+
+const SpacingUnit = (props: any) => {
+  return <div className={`p${props.n} mr2 flex flex-column justify-around`} style={{ border: '1px solid black' }}>
+    <div className="flex flex-column">
+      <span>Unit{props.n}</span>
+      <span>({props.px}px)</span>
+    </div>
+  </div>
 }
 
 class App extends Component<{}, {}> {
@@ -76,6 +80,18 @@ class App extends Component<{}, {}> {
             })}
           </View>
 
+          <h3>Spacing units</h3>
+
+          <div className="block" style={{ width: '50px' }}>
+            <div className="flex">
+              <SpacingUnit n="1" px="4" />
+              <SpacingUnit n="2" px="8" />
+              <SpacingUnit n="3" px="16" />
+              <SpacingUnit n="4" px="32" />
+              <SpacingUnit n="5" px="64" />
+            </div>
+          </div>
+
           <h3>Buttons</h3>
 
           <View className="flex">
@@ -110,10 +126,6 @@ class App extends Component<{}, {}> {
           <Input type="text" placeholder="disabled" disabled={true} />
 
           <h3>Toast</h3>
-
-          <h3>Checkbox</h3>
-
-          <Checkbox></Checkbox>
 
         </RootView>
       </ThirdCoast>

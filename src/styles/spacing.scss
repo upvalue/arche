@@ -1,11 +1,11 @@
 // spacing.scss - padding and margins
 
 $space-0: 0rem !default;
-$space-1: 0.25rem !default;
-$space-2: 0.5rem !default;
-$space-3: 1rem !default;
-$space-4: 2rem !default;
-$space-5: 4rem !default;
+$space-1: 4px !default;
+$space-2: 8px !default;
+$space-3: 16px !default;
+$space-4: 32px !default;
+$space-5: 64px !default;
 
 $spaces: (
   0: $space-0,

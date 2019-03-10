@@ -34,7 +34,8 @@
 
   &:disabled {
     cursor: not-allowed;
-    background-color: rgba($dark-gray5, 0.5);
+    background-color: $dark-gray5;
+    box-shadow: none;
   }
 
   &::placeholder {

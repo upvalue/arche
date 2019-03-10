@@ -25,16 +25,5 @@ It does depend on:
 
 # Repository usage
 
-This git repository is both a React application for demo/development purposes, and a Rollup library
-for use elsewhere.
-
-You can run it with
-
-    yarn
-    yarn start
-
-And build the library with
-
-    yarn library-build
-
-Or just use `@upvalueio/third-coast`
+The toplevel directory is the library, the `sample/` app contains a CRA app with 
+live components. See README for directions
