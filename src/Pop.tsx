@@ -1,7 +1,7 @@
 // Pop.tsx
 
-import React, { useRef, useEffect, useState } from 'react';
-import Popper from 'popper.js'
+import React/*, { useRef, useEffect, useState } */ from 'react';
+// import Popper from 'popper.js'
 
 /*
 type PopProps = {
@@ -10,8 +10,9 @@ type PopProps = {
 */
 
 export const Pop = () => {
+  /*
   const popElt = useRef<HTMLDivElement>(null);
-  const [popper, setPopper] = useState<Popper | null>(null);
+  const setPopper = useState<Popper | null>(null)[1];
 
   useEffect(() => {
     console.log('poppy loaded', popElt);
@@ -29,5 +30,7 @@ export const Pop = () => {
     <div className="pop" ref={popElt}>
     </div>
   )
+  */
+  return <p>not implemented</p>;
 
 }
