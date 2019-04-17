@@ -3,7 +3,7 @@ import { capitalize } from 'lodash';
 
 import './App.scss'
 
-import { Button, Input, View, ThirdCoast, useTheme } from '@upvalueio/third-coast';
+import { Pop, Button, Input, View, ThirdCoast, useTheme } from '@upvalueio/third-coast';
 
 const ThemeToggler = () => {
   const [themeName, setTheme] = useTheme();
@@ -124,6 +124,10 @@ class App extends Component<{}, {}> {
 
           <Input margin="mr3" type="text" placeholder="Type some text..." />
           <Input type="text" placeholder="disabled" disabled={true} />
+
+          <h3>Pop</h3>
+
+          <Pop />
 
           <h3>Toast</h3>
 

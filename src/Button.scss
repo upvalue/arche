@@ -1,10 +1,11 @@
 @import "./styles/defs/_colors.scss";
 
+// hover, active, normal
 $intent-map: (
-  'primary': ($primary2, $primary1),
-  'secondary': ($secondary2, $secondary1),
-  'warning': ($warning2, $warning1),
-  'danger': ($danger2, $danger1)
+  'primary': ($primary2, $primary1, $primary),
+  'secondary': ($secondary2, $secondary1, $secondary),
+  'warning': ($warning2, $warning1, $warning),
+  'danger': ($danger2, $danger1, $danger)
 ) !default;
 
 .button {
@@ -53,12 +54,16 @@ $intent-map: (
 }
 
 @each $intent, $pair in $intent-map {
-  $color: nth($pair, 1);
+  $color: nth($pair, 3);
   $activeColor: nth($pair, 2);
+  $hoverColor: nth($pair, 1);
   .button.#{$intent} {
     background-image: linear-gradient(to bottom, rgba($white, 0.1), rgba($white, 0));
     background-color: $color;
     color: $white;
+    &:hover {
+      background-color: $hoverColor;
+    }
     &:active {
       background-color: $activeColor;
     }

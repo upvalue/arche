@@ -6,7 +6,8 @@
   "types": "dist/library-index.d.ts",
   "dependencies": {
     "node-sass": "^4.10.0",
-    "normalize.css": "^8.0.1"
+    "normalize.css": "^8.0.1",
+    "popper.js": "^1.14.7"
   },
   "peerDependencies": {
     "react": "^16.8.4",
@@ -14,11 +15,11 @@
   },
   "devDependencies": {
     "@types/lodash": "^4.14.118",
-    "react": "^16.8.4",
-    "react-dom": "^16.8.4",
     "@types/react": "16.8.7",
     "@types/react-dom": "^16.8.2",
     "lodash": "^4.17.11",
+    "react": "^16.8.4",
+    "react-dom": "^16.8.4",
     "react-icons": "^3.2.2",
     "react-scripts": "^2.1.1",
     "rollup": "^1.6.0",

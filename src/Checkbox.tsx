@@ -18,7 +18,7 @@ const checkboxDefaultProps: AtomProps = {
  */
 export const Checkbox = (props: InputProps) => {
   // TODO if this is common, should probably move it to createAtom to avoid multiple merges, do it all at once
-  const checkbox = createAtom('input', 'checkbox', { type: 'checkbox', ...checkboxDefaultProps, ...props });
+  const checkbox = createAtom('input', 'checkbox', { type: 'checkbox', ...checkboxDefaultProps, ...props }, null);
   return <View className="checkbox">
     <div className="checkbox-indicator">&nbsp;</div>
     {checkbox}
