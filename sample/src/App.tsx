@@ -3,25 +3,15 @@ import { capitalize } from 'lodash';
 
 import './App.scss'
 
-import { Pop, Button, Input, View, ThirdCoast, useTheme } from '@upvalueio/third-coast';
-
-const ThemeToggler = () => {
-  const [themeName, setTheme] = useTheme();
-
-  return <Button onClick={() => setTheme(themeName === 'dark' ? '' : 'dark')}>
-    Toggle Theme
-  </Button>
-}
+import { Pop, Button, Input, View, ThirdCoast } from '@upvalueio/third-coast';
 
 interface RootViewProps {
   children?: React.ReactNode;
 }
 
 const RootView = (props: RootViewProps) => {
-  const [theme] = useTheme();
-
   return (
-    <View id="rootview" padding="p4" className={theme || ''}>
+    <View id="rootview" padding="p4">
       {props.children}
     </View>
   );
@@ -41,10 +31,6 @@ class App extends Component<{}, {}> {
     toast: false,
   };
 
-  toggleTheme = () => {
-    console.log('toggle theme');
-  }
-
   render() {
     const colors = ['primary', 'secondary', 'warning', 'danger'];
 
@@ -53,11 +39,6 @@ class App extends Component<{}, {}> {
         <RootView>
           <h1 className="mt0">Third Coast</h1>
           <p>Third Coast is a set of React components and styling for use in my applications.</p>
-
-          <h3>Themes</h3>
-          <p>Third Coast supports simple themes based on class names and context. Out of the box there are light (default) and dark themes.</p>
-
-          <ThemeToggler />
 
           <h3>Colors</h3>
 

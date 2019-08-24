@@ -31,6 +31,6 @@ export const Pop = () => {
     </div>
   )
   */
-  return <p>not implemented</p>;
+  return (<p>not implemented</p>);
 
 }
