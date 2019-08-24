@@ -1,12 +1,13 @@
-# Apology
+# neuma
 
-# Third Coast
+Neuma is a simple React component library for use in my own projects.
 
-Third Coast is a simple React component library for use in my own projects.
+The name is inspired by [this concept](https://en.wikipedia.org/wiki/Pneuma_(Stoic)), it's just a little easier to
+type.
 
 Primary reasons for existence:
 
-- Uses React 16.7 concepts such as hooks and memo 
+- Uses newer React concepts like hooks
 - Written in TypeScript, using literal types for many props to reduce the possibility of errors
 - Functional CSS under the hood
 - Lightweight and tree shaking friendly
@@ -26,4 +27,4 @@ It does depend on:
 # Repository usage
 
 The toplevel directory is the library, the `sample/` app contains a CRA app with 
-live components. See README for directions
+live components. See sample/README.MD for directions
