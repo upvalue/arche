@@ -1,9 +1,6 @@
-# neuma
+# Arche
 
-Neuma is a simple React component library for use in my own projects.
-
-The name is inspired by [this concept](https://en.wikipedia.org/wiki/Pneuma_(Stoic)), it's just a little easier to
-type.
+[Arche](https://en.wikipedia.org/wiki/Arche) is a simple React component library for use in my own projects.
 
 Primary reasons for existence:
 

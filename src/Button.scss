@@ -38,18 +38,6 @@ $intent-map: (
   }
 }
 
-.dark .button {
-  background-color: $dark-gray5;
-  background-image: linear-gradient(to bottom, rgba($white, 0.05), rgba($white, 0));
-  color: $white;
-  box-shadow: 0 0 0 1px rgba($black, 0.4);
-
-  &:active {
-    box-shadow: 0 0 0 1px rgba($black, 0.6),
-    inset 0 1px 2px rgba($black, 0.2);
-  }
-}
-
 @each $intent, $pair in $intent-map {
   $color: nth($pair, 3);
   $activeColor: nth($pair, 2);
@@ -77,18 +65,5 @@ $intent-map: (
 
   &:active {
     background-color: rgba($gray2, 0.3);
-  }
-}
-
-.dark .button.minimal {
-  color: $white;
-  box-shadow: none;
-
-  &:hover {
-    background-color: rgba($gray3, 0.15);
-  }
-
-  &:active {
-    background-color: rgba($gray3, 0.3);
   }
 }

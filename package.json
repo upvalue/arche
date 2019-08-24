@@ -1,5 +1,5 @@
 {
-  "name": "@upvalueio/third-coast",
+  "name": "@upvalueio/arche",
   "version": "0.1.26",
   "private": false,
   "module": "dist/index.js",
