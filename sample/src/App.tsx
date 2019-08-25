@@ -11,7 +11,7 @@ interface RootViewProps {
 
 const RootView = (props: RootViewProps) => {
   return (
-    <View id="rootview" padding="p4">
+    <View id="rootview" padding="p4" direction="column">
       {props.children}
     </View>
   );
@@ -41,7 +41,8 @@ class App extends Component<{}, {}> {
 
         <h3>Colors</h3>
 
-        <View className="flex flex-column flex-md-row">
+        <View direction={["column", "md-row"]}>
+
           {colors.map((c, i) => {
             return (
               <div key={i} className="mr1">
@@ -102,8 +103,10 @@ class App extends Component<{}, {}> {
 
         <h3>Input</h3>
 
-        <Input margin="mr3" type="text" placeholder="Type some text..." />
-        <Input type="text" placeholder="disabled" disabled={true} />
+        <div>
+          <Input margin="mr3" type="text" placeholder="Type some text..." />
+          <Input type="text" placeholder="disabled" disabled={true} />
+        </div>
 
         <h3>Pop</h3>
 
@@ -111,7 +114,7 @@ class App extends Component<{}, {}> {
 
         <h3>Toast</h3>
 
-      </RootView>
+      </RootView >
     );
   }
 }

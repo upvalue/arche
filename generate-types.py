@@ -24,11 +24,21 @@ for tipe in types:
     print(";\n")
 
 classnames = []
+props = {
+    'items': [],
+    'justify': [],
+    'content': []
+}
+# props = ['items', 'justify', 'content']
+
 with open("src/styles/flex.scss") as flex:
     for line in flex.readlines():
         if line.strip().startswith("."):
             classname = line.strip().strip(".").split("{")[0]
-            classnames.append(f'"{classname.strip()}"')
+            classtype = classname.split('-')
+            if len(classtype) == 2 and classtype[0] in props.keys():
+                props[classtype[0]].append(classtype[1].strip())
+            # classnames.append(f'"{classname.strip()}"')
+            # print(classname.split('-'))
 
-
-print(f'export type FlexClass = {" | ".join(classnames)};')
+# print(f'export type FlexClass = {" | ".join(classnames)};')

@@ -2,12 +2,17 @@ import React from 'react';
 
 // common.ts
 
+export type StringOrArray<T> = T | ReadonlyArray<T>;
+
 /**
  * Converts an array to space-separated strings, if it is an array.
  * Used for example for padding 'p1' => 'p1', ['px1', 'py2'] => 'px1 py2'
  */
-export const arrayToString = (x: ReadonlyArray<string> | string | undefined) =>
-  Array.isArray(x) ? x.join(' ') : x;
+export const arrayToString = (x: ReadonlyArray<string> | string | undefined, prepend?: string) =>
+  Array.isArray(x) ?
+    (prepend ? x.map(x => `${prepend}-${x}`) : x).join(' ') : ((prepend && x) ? `${prepend}-${x}` : x);
+
+
 
 /**
  * Extract functional CSS style class names from props
@@ -21,10 +26,6 @@ export const buildClassNames = (componentClassName: string, props: any) => {
     props.color && `color-${props.color}`,
     props.intent,
     props.minimal && 'minimal',
-    props.flex && 'flex',
-    arrayToString(
-      Array.isArray(props.flex) ? props.flex.filter((f: any) => f !== 'flex') : props.flex
-    ),
     arrayToString(props.margin),
     arrayToString(props.padding),
     props.className,
@@ -44,7 +45,6 @@ export const createAtom = <RefType>(defaultComponent: string, componentClassName
   const elementProps: any = {
     ...props,
     className: buildClassNames(componentClassName, props),
-    flex: undefined,
     minimal: undefined,
     margin: undefined,
     padding: undefined,

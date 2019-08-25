@@ -1,6 +1,10 @@
 .flex { display: flex }
 
 .flex-column  { flex-direction: column }
+.flex-row { flex-direction: row; }
+.flex-row-reverse { flex-direction: row-reverse; }
+.flex-column-reverse { flex-direction: column-reverse; }
+
 .flex-wrap    { flex-wrap: wrap }
 
 @include breakpoint(md) {
