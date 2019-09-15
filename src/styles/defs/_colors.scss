@@ -111,3 +111,26 @@ $color-map-list: ('primary', $primary-map), ('secondary', $secondary-map),
   ('warning', $warning-map), ('danger', $danger-map),
   ('gray', $gray-map), ('dark-gray', $dark-gray-map),
   ('light-gray', $light-gray-map);
+
+@each $color in $color-map-list {
+  $color-name: nth($color, 1);
+  $color-map: nth($color, 2);
+
+  .color-#{$color-name} {
+    color: map-get($color-map, 3);
+  }
+
+  .bg-#{$color-name} {
+    background-color: map-get($color-map, 3);
+  }
+
+  @for $i from 1 to 6 {
+    .color-#{$color-name}-#{$i} {
+      color: map-get($color-map, $i);
+    }
+
+    .bg-#{$color-name}-#{$i} {
+      background-color: map-get($color-map, $i);
+    }
+  }
+}

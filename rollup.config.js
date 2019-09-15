@@ -2,7 +2,7 @@ import typescript from 'rollup-plugin-typescript2'
 import external from 'rollup-plugin-peer-deps-external'
 import url from 'rollup-plugin-url'
 import sourceMaps from 'rollup-plugin-sourcemaps';
-//import scss from 'rollup-plugin-scss';
+import copy from 'rollup-plugin-copy-glob';
 import commonjs from 'rollup-plugin-commonjs';
 
 import pkg from './package.json'
@@ -20,7 +20,9 @@ export default {
     typescript({
       tsconfig: 'tsconfig-rollup.json',    
     }),
-    //scss(),
+    copy([
+      { files: 'src/styles/defs/*.scss', dest: 'dist/styles' }
+    ], { verbose: true }),
     commonjs(),
     sourceMaps(),
   ]
