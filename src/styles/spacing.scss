@@ -24,14 +24,14 @@ $directions: (('l', ('left')), ('t', ('top')), ('r', ('right')), ('b', ('bottom'
   $typefield: nth($type, 2);
 
   @for $i from 0 to 6 {
-    .#{$typeabbrev}#{$i} {
+    .a-#{$typeabbrev}#{$i} {
       #{$typefield}: map-get($spaces, $i);
     }
 
     @each $direction in $directions {
       $abbrev: nth($direction, 1);
       $fields: nth($direction, 2);
-        .#{$typeabbrev}#{$abbrev}#{$i} {
+        .a-#{$typeabbrev}#{$abbrev}#{$i} {
           @each $field in $fields {
             #{$typefield}-#{$field}: map-get($spaces, $i);
           }

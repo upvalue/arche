@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { capitalize } from 'lodash';
 
-import '@upvalueio/arche/index.css';
+import '@upvalueio/arche/index.scss';
 import './App.css'
 import { Pop, Button, Input, View } from '@upvalueio/arche';
 

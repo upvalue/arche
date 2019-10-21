@@ -16,7 +16,7 @@ const inputDefaultProps: AtomProps = {
  */
 export const Input = (props: InputProps) => {
   // TODO if this is common, should probably move it to createAtom to avoid multiple merges, do it all at once
-  return createAtom('input', 'a-input', { ...inputDefaultProps, ...props }, null);
+  return createAtom('input', 'a-Input', { ...inputDefaultProps, ...props }, null);
 };
 
 export default Input;

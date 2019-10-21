@@ -116,20 +116,20 @@ $color-map-list: ('primary', $primary-map), ('secondary', $secondary-map),
   $color-name: nth($color, 1);
   $color-map: nth($color, 2);
 
-  .color-#{$color-name} {
+  .a-color-#{$color-name} {
     color: map-get($color-map, 3);
   }
 
-  .bg-#{$color-name} {
+  .a-bg-#{$color-name} {
     background-color: map-get($color-map, 3);
   }
 
   @for $i from 1 to 6 {
-    .color-#{$color-name}-#{$i} {
+    .a-color-#{$color-name}-#{$i} {
       color: map-get($color-map, $i);
     }
 
-    .bg-#{$color-name}-#{$i} {
+    .a-bg-#{$color-name}-#{$i} {
       background-color: map-get($color-map, $i);
     }
   }
