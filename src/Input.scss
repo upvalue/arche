@@ -6,8 +6,6 @@
   border: none;
   border-radius: 2px;
 
-  //inset border-shadow(0.15);
-
   &:focus {
     box-shadow: border-shadow(1, $primary, 1px), border-shadow(1, $primary, 1px), border-shadow(0.3, $primary, 3px);
   }

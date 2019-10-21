@@ -29,7 +29,6 @@ props = {
     'justify': [],
     'content': []
 }
-# props = ['items', 'justify', 'content']
 
 with open("src/styles/flex.scss") as flex:
     for line in flex.readlines():
@@ -41,4 +40,3 @@ with open("src/styles/flex.scss") as flex:
             # classnames.append(f'"{classname.strip()}"')
             # print(classname.split('-'))
 
-# print(f'export type FlexClass = {" | ".join(classnames)};')

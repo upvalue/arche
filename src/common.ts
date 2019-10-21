@@ -13,7 +13,6 @@ export const arrayToString = (x: ReadonlyArray<string> | string | undefined, pre
     (prepend ? x.map(x => `${prepend}-${x}`) : x).join(' ') : ((prepend && x) ? `${prepend}-${x}` : x);
 
 
-
 /**
  * Extract functional CSS style class names from props
  * @param componentClassName Component class name, always present
@@ -22,12 +21,12 @@ export const arrayToString = (x: ReadonlyArray<string> | string | undefined, pre
 export const buildClassNames = (componentClassName: string, props: any) => {
   const classNames = [
     `${componentClassName}`,
-    props.bg && `bg-${props.bg}`,
+    props.bg && `a-bg-${props.bg}`,
     props.color && `color-${props.color}`,
     props.intent,
     props.minimal && 'minimal',
-    arrayToString(props.margin),
-    arrayToString(props.padding),
+    arrayToString(props.margin, 'a'),
+    arrayToString(props.padding, 'a'),
     props.className,
   ];
 
@@ -45,6 +44,7 @@ export const createAtom = <RefType>(defaultComponent: string, componentClassName
   const elementProps: any = {
     ...props,
     className: buildClassNames(componentClassName, props),
+    direction: undefined,
     minimal: undefined,
     margin: undefined,
     padding: undefined,

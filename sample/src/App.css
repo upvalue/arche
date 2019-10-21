@@ -1,33 +1,18 @@
-.App {
-  text-align: center;
+/* @import '~@upvalueio/arche/index.scss'; */
+
+body {
+  font-family: 'Inter UI', sans-serif;
+  margin: 0;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
-}
-
-.App-header {
-  background-color: #282c34;
+#root {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+#rootview {
+  flex: 1 1 auto;
+  background-color: --a-light-gray5;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}

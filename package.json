@@ -5,10 +5,10 @@
   "module": "dist/index.js",
   "types": "dist/library-index.d.ts",
   "dependencies": {
-    "node-sass": "^4.10.0",
     "normalize.css": "^8.0.1",
     "popper.js": "^1.14.7",
-    "prettier": "^1.18.2"
+    "prettier": "^1.18.2",
+    "rollup-plugin-copy-glob": "^0.3.1"
   },
   "peerDependencies": {
     "react": "^16.9",
