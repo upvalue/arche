@@ -20,9 +20,9 @@ export default {
     typescript({
       tsconfig: 'tsconfig-rollup.json',    
     }),
-    /*copy([
+    copy([
       { files: 'src/styles/defs/*.scss', dest: 'styles' }
-    ], { verbose: true }),*/
+    ], { verbose: true }),
     commonjs(),
     sourceMaps(),
   ]
