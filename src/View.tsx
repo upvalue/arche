@@ -11,6 +11,7 @@ export type ViewProps = HTMLAttributes<HTMLDivElement> & AtomProps & {
   direction?: StringOrArray<FlexDirectionProp>;
   items?: StringOrArray<FlexItemsProp>;
   justify?: StringOrArray<FlexJustifyProp>;
+  auto?: true;
 };
 
 export const View = (props: ViewProps) => {
@@ -20,6 +21,7 @@ export const View = (props: ViewProps) => {
     arrayToString(props.direction, 'flex'),
     arrayToString(props.items, 'items'),
     arrayToString(props.justify, 'justify'),
+    props.auto && 'flex-auto',
   ].filter(Boolean).join(' ');
 
   return createAtom('div', classnames, props, null);

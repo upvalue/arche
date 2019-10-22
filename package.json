@@ -1,6 +1,6 @@
 {
   "name": "@upvalueio/arche",
-  "version": "0.1.29",
+  "version": "0.1.31",
   "private": false,
   "module": "dist/index.js",
   "types": "dist/library-index.d.ts",
