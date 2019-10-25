@@ -3,7 +3,7 @@ import { capitalize } from 'lodash';
 
 import '@upvalueio/arche/index.scss';
 import './App.css'
-import { Pop, Button, Input, View } from '@upvalueio/arche';
+import { Pop, Button, Input, View, Editor } from '@upvalueio/arche';
 
 interface RootViewProps {
   children?: React.ReactNode;
@@ -107,6 +107,12 @@ class App extends Component<{}, {}> {
           <Input margin="mr3" type="text" placeholder="Type some text..." />
           <Input type="text" placeholder="disabled" disabled={true} />
         </div>
+
+        <h3>Editor</h3>
+
+        <p>A rich text editor.</p>
+
+        <Editor />
 
         <h3>Pop</h3>
 
