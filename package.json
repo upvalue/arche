@@ -1,6 +1,6 @@
 {
   "name": "@upvalue/arche",
-  "version": "0.1.31",
+  "version": "0.1.33",
   "private": false,
   "module": "dist/index.js",
   "types": "dist/library-index.d.ts",
@@ -56,5 +56,8 @@
     "@types/react-dom": "^16.8.2",
     "react": "16.9",
     "react-dom": "16.9"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
   }
 }
