@@ -50,6 +50,7 @@ export const createAtom = <RefType>(defaultComponent: string, componentClassName
     padding: undefined,
     intent: undefined,
     ref: forwardRef,
+    auto: undefined,
   }
 
   return React.createElement(props.component || defaultComponent, elementProps, props.children);
