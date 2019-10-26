@@ -3,7 +3,7 @@ import { capitalize } from 'lodash';
 
 import '@upvalueio/arche/index.scss';
 import './App.css'
-import { Pop, Button, Input, View, Editor } from '@upvalueio/arche';
+import { Pop, Button, Input, View, Editor, Table, TableRow, TableCell } from '@upvalueio/arche';
 
 interface RootViewProps {
   children?: React.ReactNode;
@@ -25,6 +25,21 @@ const SpacingUnit = (props: any) => {
     </div>
   </div>
 }
+
+const tableRows = [
+  {
+    name: 'Dave',
+    age: 21,
+  },
+  {
+    name: 'Jim',
+    age: 22,
+  },
+  {
+    name: 'Sara',
+    age: 25,
+  }
+]
 
 class App extends Component<{}, {}> {
   state = {
@@ -114,11 +129,18 @@ class App extends Component<{}, {}> {
 
         <Editor />
 
-        <h3>Pop</h3>
+        <h3>Table</h3>
 
-        <Pop />
-
-        <h3>Toast</h3>
+        <Table striped columns={['Name', 'Age']} elementProps={{ style: { maxWidth: 500 } }}>
+          {tableRows.map(tr => {
+            return (
+              <TableRow key={tr.name}>
+                <TableCell>{tr.name}</TableCell>
+                <TableCell>{tr.age}</TableCell>
+              </TableRow>
+            )
+          })}
+        </Table>
 
       </RootView >
     );

@@ -1,0 +1,18 @@
+@import './styles/defs/colors';
+
+.a-Table th {
+  text-align: left;
+}
+
+.a-Table {
+  border-spacing: 0 0;
+}
+
+.a-Table thead tr th {
+  border-collapse: separate;
+  border-bottom: 1px solid $light-gray1;
+}
+
+.a-Table-striped tbody tr:nth-of-type(odd) {
+  background-color: $light-gray4;
+}
