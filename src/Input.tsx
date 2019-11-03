@@ -3,7 +3,7 @@ import { AtomProps } from './types';
 
 import { createAtom } from './common';
 
-interface InputProps extends InputHTMLAttributes<HTMLInputElement>, AtomProps {
+type InputProps = InputHTMLAttributes<HTMLInputElement> & AtomProps & {
 }
 
 const inputDefaultProps: AtomProps = {

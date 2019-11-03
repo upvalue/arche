@@ -1,9 +1,56 @@
-import React, { Component } from 'react';
+import React, { Component, useEffect, useRef, useState } from 'react';
 import { capitalize } from 'lodash';
 
-import '@upvalueio/arche/index.scss';
-import './App.css'
-import { Pop, Button, Input, View, Editor, Table, TableRow, TableCell } from '@upvalueio/arche';
+import '@upvalue/arche/index.scss';
+import {  Button, Input, View,  Table, TableRow, TableCell } from '@upvalue/arche';
+
+type EditorDataText = {
+  type: 'text';
+  body: string;
+}
+
+type EditorDataAtom = EditorDataText;
+
+type EditorDataLine = {
+  children: ReadonlyArray<EditorDataAtom>;
+}
+
+type EditorDataDoc = {
+  root: ReadonlyArray<EditorDataAtom>;
+}
+
+const EditorLine = (props: {node: EditorDataLine}) => {
+  return (
+    <div data-editorLine="true">
+      {props.node}
+    </div>
+  );
+}
+
+const Editor = () => {
+  const ref = useRef<HTMLDivElement>(null);
+
+  const [lines, setLines] = useState([]);
+
+  useEffect(() => {
+    if(ref.current !== null) {
+      ref.current.addEventListener('input', e => {
+        const target = e.srcElement as HTMLDivElement | null;
+        if(target !== null) {
+          target.childNodes.forEach(child => console.log('added new Childe'))
+        }
+      })
+    }
+  },[ref]);
+
+  return (
+    <div contentEditable ref={ref}>
+      {lines.map(line => {
+        <EditorLine node={line} />
+      })}
+    </div>
+  );
+}
 
 interface RootViewProps {
   children?: React.ReactNode;
@@ -40,6 +87,7 @@ const tableRows = [
     age: 25,
   }
 ]
+
 
 class App extends Component<{}, {}> {
   state = {
@@ -126,7 +174,6 @@ class App extends Component<{}, {}> {
         <h3>Editor</h3>
 
         <p>A rich text editor.</p>
-
         <Editor />
 
         <h3>Table</h3>

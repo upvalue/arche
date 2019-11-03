@@ -4,7 +4,7 @@ import classNames from 'classnames';
 import { AtomProps } from './types';
 import { createAtom } from './common';
 
-interface TableProps {
+type TableProps = {
   columns: ReadonlyArray<React.ReactNode>;
   elementProps?: AtomProps & HTMLAttributes<HTMLTableElement>;
   children?: React.ReactNode;
@@ -12,7 +12,6 @@ interface TableProps {
 }
 
 const tableDefaultProps: AtomProps = {
-  padding: ['px2', 'py2']
 };
 
 

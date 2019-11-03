@@ -3,7 +3,7 @@ import { HTMLAttributes } from 'react';
 import { AtomProps } from './types';
 import { createAtom } from './common';
 
-interface TableCellProps extends HTMLAttributes<HTMLTableCellElement> { }
+type TableCellProps = HTMLAttributes<HTMLTableCellElement>;
 
 const tableCellDefaultProps: AtomProps = {
   padding: ['px2', 'py2']

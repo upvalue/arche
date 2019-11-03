@@ -1,8 +1,8 @@
-// Breakpooint.tsx - breakpoint context and hook
+// Breakpoint.tsx - breakpoint context and hook
 import React, { useContext, useState, useEffect } from 'react';
 import { BREAKPOINT_LG, BREAKPOINT_MD } from './constants';
 
-export interface Screen {
+export type Screen = {
   width: number;
   height: number;
   available: boolean;
@@ -12,7 +12,7 @@ export type BreakpointType = 'sm' | 'md' | 'lg';
 
 const BreakpointContext = React.createContext<BreakpointType>('lg');
 
-interface BreakpointProviderProps {
+type BreakpointProviderProps= {
   children?: React.ReactNode;
 }
 
