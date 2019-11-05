@@ -1068,6 +1068,19 @@
     prettier "^1.18.2"
     rollup-plugin-copy-glob "^0.3.1"
 
+"@upvalueio/arche@^0.1.39":
+  version "0.1.39"
+  resolved "https://registry.npmjs.org/@upvalueio/arche/-/arche-0.1.39.tgz#fb4b6b792f158fd0a72b1c550eee013c8da250f6"
+  integrity sha512-GLTMeaKPaqQ3p1r9jZR/GUgx6qevkwTYzGhq7pEi2I115pQr+j5fgRTOF6Duz0vID1VYpJUjXAdk6B0KhwDGag==
+  dependencies:
+    "@types/classnames" "^2.2.9"
+    classnames "^2.2.6"
+    node-sass "^4.12.0"
+    normalize.css "^8.0.1"
+    popper.js "^1.14.7"
+    prettier "^1.18.2"
+    rollup-plugin-copy-glob "^0.3.1"
+
 "@webassemblyjs/ast@1.7.11":
   version "1.7.11"
   resolved "https://registry.npmjs.org/@webassemblyjs/ast/-/ast-1.7.11.tgz#b988582cafbb2b095e8b556526f30c90d057cace"

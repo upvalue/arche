@@ -1,8 +1,8 @@
 import React, { Component, useEffect, useRef, useState } from 'react';
 import { capitalize } from 'lodash';
 
-import '@upvalue/arche/index.scss';
-import {  Button, Input, View,  Table, TableRow, TableCell } from '@upvalue/arche';
+import '@upvalueio/arche/index.scss';
+import { Button, Input, View, Table, TableRow, TableCell, Progress } from '@upvalueio/arche';
 
 type EditorDataText = {
   type: 'text';
@@ -19,7 +19,7 @@ type EditorDataDoc = {
   root: ReadonlyArray<EditorDataAtom>;
 }
 
-const EditorLine = (props: {node: EditorDataLine}) => {
+const EditorLine = (props: { node: EditorDataLine }) => {
   return (
     <div data-editorLine="true">
       {props.node}
@@ -33,15 +33,15 @@ const Editor = () => {
   const [lines, setLines] = useState([]);
 
   useEffect(() => {
-    if(ref.current !== null) {
+    if (ref.current !== null) {
       ref.current.addEventListener('input', e => {
         const target = e.srcElement as HTMLDivElement | null;
-        if(target !== null) {
+        if (target !== null) {
           target.childNodes.forEach(child => console.log('added new Childe'))
         }
       })
     }
-  },[ref]);
+  }, [ref]);
 
   return (
     <div contentEditable ref={ref}>
@@ -189,6 +189,26 @@ class App extends Component<{}, {}> {
           })}
         </Table>
 
+        <h3>Progress</h3>
+
+        <View
+          padding="py2"
+        >
+          <Progress
+            value={25}
+            max={100}
+          />
+        </View>
+
+        <View
+          padding="py2"
+        >
+          <Progress
+            intent="secondary"
+            value={25}
+            max={100}
+          />
+        </View>
       </RootView >
     );
   }

@@ -1,0 +1,27 @@
+
+.a-Progress[value] {
+  -webkit-appearance: none;
+   appearance: none;
+}
+
+.a-Progress[value]::-webkit-progress-bar {
+  background-color: $light-gray4;
+  border-radius: 4px;
+}
+
+.a-Progress[value]::-webkit-progress-value {
+  background-color: $primary4;
+  border-radius: 4px 0 0 4px;
+}
+
+.secondary.a-Progress[value]::-webkit-progress-value {
+  background-color: $secondary4;
+}
+
+.warning.a-Progress[value]::-webkit-progress-value {
+  background-color: $warning4;
+}
+
+.danger.a-Progress[value]::-webkit-progress-value {
+  background-color: $danger4;
+}

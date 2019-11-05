@@ -3,6 +3,7 @@ import { View } from './View';
 import { Input } from './Input';
 import { Pop } from './Pop';
 import { Editor } from './Editor';
+import { Progress } from './Progress';
 import { Table } from './Table';
 import { TableRow } from './TableRow';
 import { TableCell } from './TableCell';
@@ -15,6 +16,7 @@ export {
   Input,
   Pop,
   Editor,
+  Progress,
   Table,
   TableRow,
   TableCell,
