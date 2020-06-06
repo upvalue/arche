@@ -3,6 +3,7 @@ import { capitalize } from 'lodash';
 
 import '@upvalueio/arche/index.scss';
 import { Button, Input, View, Table, TableRow, TableCell, Progress } from '@upvalueio/arche';
+import Popper from 'popper.js';
 
 type EditorDataText = {
   type: 'text';
@@ -30,24 +31,26 @@ const EditorLine = (props: { node: EditorDataLine }) => {
 const Editor = () => {
   const ref = useRef<HTMLDivElement>(null);
 
-  const [lines, setLines] = useState([]);
-
   useEffect(() => {
     if (ref.current !== null) {
-      ref.current.addEventListener('input', e => {
-        const target = e.srcElement as HTMLDivElement | null;
-        if (target !== null) {
-          target.childNodes.forEach(child => console.log('added new Childe'))
-        }
-      })
     }
-  }, [ref]);
+  }, [ref])
+
 
   return (
-    <div contentEditable ref={ref}>
-      {lines.map(line => {
-        <EditorLine node={line} />
-      })}
+    <div>
+      <div>
+        <button onClick={() => {
+          document.execCommand('insertUnorderedList');
+        }}>insert list</button>
+
+        <button onClick={() => {
+          document.execCommand('indent', false);
+        }}>try indent</button>
+      </div>
+      <div contentEditable ref={ref}>
+        some editable stuffs
+      </div>
     </div>
   );
 }

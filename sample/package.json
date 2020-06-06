@@ -5,6 +5,7 @@
   "dependencies": {
     "@upvalueio/arche": "^0.1.39",
     "node-sass": "^4.12.0",
+    "popper.js": "^1.16.0",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
     "typescript": "^3.3.3333"

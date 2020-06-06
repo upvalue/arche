@@ -1055,19 +1055,6 @@
   resolved "https://registry.npmjs.org/@types/tapable/-/tapable-1.0.2.tgz#e13182e1b69871a422d7863e11a4a6f5b814a4bd"
   integrity sha512-42zEJkBpNfMEAvWR5WlwtTH22oDzcMjFsL9gDGExwF8X8WvAiw7Vwop7hPw03QT8TKfec83LwbHj6SvpqM4ELQ==
 
-"@upvalue/arche@^0.1.32":
-  version "0.1.32"
-  resolved "https://registry.npmjs.org/@upvalue/arche/-/arche-0.1.32.tgz#277c19b5a49cbff5c991cc4f016f82e15afd215f"
-  integrity sha512-BiMrm7xreUL1oR93zNMV+dVwjj3LGzPt7s5Xx30e6T1J0U3KWsLVBaXFzruxUC+EnyZCfT3rezrlmMKzAN9Iyg==
-  dependencies:
-    "@types/classnames" "^2.2.9"
-    classnames "^2.2.6"
-    node-sass "^4.12.0"
-    normalize.css "^8.0.1"
-    popper.js "^1.14.7"
-    prettier "^1.18.2"
-    rollup-plugin-copy-glob "^0.3.1"
-
 "@upvalueio/arche@^0.1.39":
   version "0.1.39"
   resolved "https://registry.npmjs.org/@upvalueio/arche/-/arche-0.1.39.tgz#fb4b6b792f158fd0a72b1c550eee013c8da250f6"
@@ -7403,7 +7390,7 @@ pnp-webpack-plugin@1.2.1:
   dependencies:
     ts-pnp "^1.0.0"
 
-popper.js@^1.14.7:
+popper.js@^1.14.7, popper.js@^1.16.0:
   version "1.16.0"
   resolved "https://registry.npmjs.org/popper.js/-/popper.js-1.16.0.tgz#2e1816bcbbaa518ea6c2e15a466f4cb9c6e2fbb3"
   integrity sha512-+G+EkOPoE5S/zChTpmBSSDYmhXJ5PsW8eMhH8cP/CQHMFPBG/kC9Y5IIw6qNYgdJ+/COf0ddY2li28iHaZRSjw==
